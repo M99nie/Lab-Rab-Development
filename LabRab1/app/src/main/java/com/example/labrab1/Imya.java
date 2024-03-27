@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
+import android.widget.Toast;
 
 public class Imya extends Fragment {
     TextView textView2;
@@ -33,10 +34,10 @@ public class Imya extends Fragment {
             @Override
             public void onClick(View v) {
                 textView2.setText("Button was pressed...");
-                // TODO Auto-generated method stub
-
+                Toast.makeText(button4.getContext(),"message",Toast.LENGTH_LONG).show();
             }
         };
         button4.setOnClickListener(ocl);
+
     }
 }
