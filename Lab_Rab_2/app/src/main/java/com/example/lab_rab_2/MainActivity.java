@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
 
                 public  void onClick(View v) {
-                    Intent intent = new Intent(MainActivity.this, Result.class);
+                    Intent intent = new Intent(MainActivity.this, Fragment_View.class);
                     startActivity(intent);
                 }
             });
