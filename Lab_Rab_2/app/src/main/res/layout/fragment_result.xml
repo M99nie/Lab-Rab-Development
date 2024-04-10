@@ -5,7 +5,7 @@
     android:id="@+id/result"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBC333"
+    android:background="@drawable/mark_molnar_warhammer_40000__exterminatus_7954756"
     tools:context=".Result">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,23 +13,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="666dp"
+        android:layout_marginTop="606dp"
         android:layout_marginBottom="15dp"
         android:background="@color/black"
         android:backgroundTint="#673AB7"
-        android:text="Назад" />
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mark_molnar_warhammer_40000__exterminatus_7954756"
+        android:text="Назад"
         android:visibility="visible"
         tools:visibility="visible" />
 
