@@ -1,7 +1,10 @@
 package com.example.lab_rab_3;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
+import android.view.View;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -18,6 +21,26 @@ public class MainActivity extends AppCompatActivity {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+
+            Button chat1=(Button) findViewById(R.id.chat1);
+            Button chat2=(Button) findViewById(R.id.chat2);
+
+            chat1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent goChat= new Intent(MainActivity.this, MolCHAT_lin.class);
+                    startActivity(goChat);
+                }
+            });
+
+            chat2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent goChat2= new Intent(MainActivity.this, CHATskiy_constr.class);
+                    startActivity(goChat2);
+                }
+            });
+
             return insets;
         });
     }
