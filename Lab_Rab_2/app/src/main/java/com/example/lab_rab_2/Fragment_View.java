@@ -11,8 +11,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Fragment_View extends AppCompatActivity {
+import com.example.lab_rab_2.Result;
+import com.example.lab_rab_2.Tekast;
 
+public class Fragment_View extends AppCompatActivity implements Tekast.OnTextEnteredListener{
+
+    //public Tekast.FirstFragment firstFragment;
+    //private Result.SecondFragment secondFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,16 +27,27 @@ public class Fragment_View extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 
-            Button button2 = findViewById(R.id.button2);
-            button2.setOnClickListener(new View.OnClickListener() {
+            //firstFragment = new FirstFragment();
+            //secondFragment = new SecondFragment();
 
-                public  void onClick(View v) {
-                    Intent intent2 = new Intent(Fragment_View.this, MainActivity.class);
-                    startActivity(intent2);
-                }
-            });
+            //getSupportFragmentManager().beginTransaction()
+            //        .add(R.id.fragmentContainerView2, firstFragment)
+            //        .add(R.id.fragmentContainerView, secondFragment)
+            //        .commit();
+
+            //firstFragment.setOnTextEnteredListener(this);
+            //Button button2 = findViewById(R.id.button2);
+
 
             return insets;
         });
+    }
+
+    @Override
+    public void onTextEntered(String text) {
+        Result secondFragment = (Result)getSupportFragmentManager()
+                .findFragmentById(R.id.fragmentContainerView);
+        if (secondFragment != null)
+            secondFragment.displayText(text);
     }
 }
