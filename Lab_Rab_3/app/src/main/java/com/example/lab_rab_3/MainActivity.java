@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
             Button chat1=(Button) findViewById(R.id.chat1);
             Button chat2=(Button) findViewById(R.id.chat2);
+            Button pictures=(Button) findViewById(R.id.pictures);
 
             chat1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -38,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     Intent goChat2= new Intent(MainActivity.this, CHATskiy_constr.class);
                     startActivity(goChat2);
+                }
+            });
+
+            pictures.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent goPICS= new Intent(MainActivity.this, COPYbara.class);
+                    startActivity(goPICS);
                 }
             });
 
